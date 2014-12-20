@@ -136,17 +136,21 @@ public class ProjectLocalServiceClpInvoker {
 				"java.util.Date", "java.util.Date", "java.lang.String"
 			};
 
-		_methodName62 = "findAllProjects";
+		_methodName62 = "fetchProject";
 
 		_methodParameterTypes62 = new String[] { "long" };
 
-		_methodName63 = "findProjectsByManagerName";
+		_methodName63 = "findAllProjects";
 
-		_methodParameterTypes63 = new String[] { "java.lang.String" };
+		_methodParameterTypes63 = new String[] { "long" };
 
-		_methodName64 = "updateProject";
+		_methodName64 = "findProjectsByManagerName";
 
-		_methodParameterTypes64 = new String[] {
+		_methodParameterTypes64 = new String[] { "java.lang.String" };
+
+		_methodName65 = "updateProject";
+
+		_methodParameterTypes65 = new String[] {
 				"long", "long", "com.liferay.evp.admin.pojos.LiferayAuditPOJO",
 				"java.lang.String", "java.lang.String", "java.lang.String",
 				"long", "long", "long", "double", "double", "java.util.Date",
@@ -282,16 +286,21 @@ public class ProjectLocalServiceClpInvoker {
 
 		if (_methodName62.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes62, parameterTypes)) {
-			return ProjectLocalServiceUtil.findAllProjects(((Long)arguments[0]).longValue());
+			return ProjectLocalServiceUtil.fetchProject(((Long)arguments[0]).longValue());
 		}
 
 		if (_methodName63.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes63, parameterTypes)) {
-			return ProjectLocalServiceUtil.findProjectsByManagerName((java.lang.String)arguments[0]);
+			return ProjectLocalServiceUtil.findAllProjects(((Long)arguments[0]).longValue());
 		}
 
 		if (_methodName64.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes64, parameterTypes)) {
+			return ProjectLocalServiceUtil.findProjectsByManagerName((java.lang.String)arguments[0]);
+		}
+
+		if (_methodName65.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes65, parameterTypes)) {
 			return ProjectLocalServiceUtil.updateProject(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue(),
 				(com.liferay.evp.admin.pojos.LiferayAuditPOJO)arguments[2],
@@ -357,4 +366,6 @@ public class ProjectLocalServiceClpInvoker {
 	private String[] _methodParameterTypes63;
 	private String _methodName64;
 	private String[] _methodParameterTypes64;
+	private String _methodName65;
+	private String[] _methodParameterTypes65;
 }

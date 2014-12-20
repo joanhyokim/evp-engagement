@@ -374,8 +374,18 @@ public class ClpSerializer {
 				throwable.getCause());
 		}
 
+		if (className.equals("com.liferay.evp.admin.ProjectEndDateException")) {
+			return new com.liferay.evp.admin.ProjectEndDateException(throwable.getMessage(),
+				throwable.getCause());
+		}
+
 		if (className.equals("com.liferay.evp.admin.ProjectNameException")) {
 			return new com.liferay.evp.admin.ProjectNameException(throwable.getMessage(),
+				throwable.getCause());
+		}
+
+		if (className.equals("com.liferay.evp.admin.ProjectStartDateException")) {
+			return new com.liferay.evp.admin.ProjectStartDateException(throwable.getMessage(),
 				throwable.getCause());
 		}
 
