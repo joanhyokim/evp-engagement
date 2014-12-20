@@ -70,6 +70,10 @@ public class ProjectLocalServiceImpl extends ProjectLocalServiceBaseImpl {
 		return addProject(project);
 	}
 
+	public Project fetchProject(long projectId) {
+		return projectPersistence.fetchByPrimaryKey(projectId);
+	}
+
 	public List<Project> findAllProjects(long companyId) {
 		return projectPersistence.findByCompany(companyId);
 	}

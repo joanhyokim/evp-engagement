@@ -64,6 +64,10 @@ public class VolunteerLocalServiceImpl extends VolunteerLocalServiceBaseImpl {
 		return volunteer;
 	}
 
+	public Volunteer fetchVolunteer(long volunteerId) {
+		return volunteerPersistence.fetchByPrimaryKey(volunteerId);
+	}
+
 	public List<Volunteer> getVolunteers(long companyId, int start, int end) {
 		return volunteerPersistence.findByCompanyId(companyId, start, end);
 	}

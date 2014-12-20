@@ -8,12 +8,9 @@
 <%@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %>
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 
-<%@ page import="com.liferay.portal.kernel.util.FastDateFormatFactoryUtil" %><%@
+<%@ page import="com.liferay.evp.admin.model.Project" %><%@
 page import="com.liferay.portal.kernel.util.ParamUtil" %><%@
 page import="com.liferay.portal.util.PortalUtil" %>
-
-<%@ page import="java.text.DateFormat" %><%@
-page import="java.text.Format" %>
 
 <portlet:defineObjects />
 
@@ -21,9 +18,4 @@ page import="java.text.Format" %>
 
 <%
 String currentURL = PortalUtil.getCurrentURL(request);
-
-Format shortDateFormatDate = FastDateFormatFactoryUtil.getDate(DateFormat.SHORT, locale, timeZone);
-DateFormat shortDateFormatDateTime = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT, locale);
-
-shortDateFormatDateTime.setTimeZone(timeZone);
 %>
